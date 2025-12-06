@@ -43,7 +43,7 @@ Environment variables:
 
 The plugin intercepts IRC connections and:
 
-1. Extracts a bearer token from the client's `jwt` tag
+1. Extracts a bearer token from the client's `token` tag
 2. Validates the token by calling the configured OAuth `/me` endpoint
 3. Extracts username from claims (preferred_username, username, user_login, user_nicename, or email prefix)
 4. Configures SASL PLAIN authentication upstream using the token as the password

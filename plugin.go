@@ -79,7 +79,7 @@ func Start(gateway *webircgateway.Gateway, pluginsQuit *sync.WaitGroup) {
 // Extract token from common locations
 func extractToken(c *webircgateway.Client) string {
     // Prefer explicit token tag set by transport
-    if tok, ok := c.Tags["jwt"]; ok && tok != "" {
+    if tok, ok := c.Tags["token"]; ok && tok != "" {
         return tok
     }
     return ""
